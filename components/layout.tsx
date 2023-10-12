@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
+import profileImg from '../public/images/profile.jpg'
 import Link from 'next/link';
 
 const name = 'Gnaneswar Kulindala';
@@ -36,12 +37,11 @@ export default function Layout({
           <>
             <Image
               priority
-              src="/images/profile.jpg"
+              src={profileImg}
               className={utilStyles.borderCircle}
               height={144}
               width={144}
               alt={name}
-              unoptimized
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
@@ -50,12 +50,11 @@ export default function Layout({
             <Link href="/">
               <Image
                 priority
-                src="/images/profile.jpg"
+                src={profileImg}
                 className={utilStyles.borderCircle}
                 height={108}
                 width={108}
                 alt={name}
-                unoptimized
               />
             </Link>
             <h2 className={utilStyles.headingLg}>

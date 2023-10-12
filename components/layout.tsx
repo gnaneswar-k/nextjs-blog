@@ -17,7 +17,7 @@ export default function Layout({
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="icon" href="./favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content="Learn how to build a personal website using Next.js"
@@ -41,6 +41,7 @@ export default function Layout({
               height={144}
               width={144}
               alt={name}
+              unoptimized
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
@@ -54,6 +55,7 @@ export default function Layout({
                 height={108}
                 width={108}
                 alt={name}
+                unoptimized
               />
             </Link>
             <h2 className={utilStyles.headingLg}>

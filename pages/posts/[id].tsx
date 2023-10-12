@@ -7,13 +7,13 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // Add the "await" keyword like this:
-    const postData = await getPostData(params?.id as string);
-    return {
-      props: {
-        postData,
-      },
-    };
+  const postData = await getPostData(params?.id as string);
+  return {
+    props: {
+      postData,
+    },
   };
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds();
